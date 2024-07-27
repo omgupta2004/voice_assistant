@@ -285,7 +285,7 @@ if __name__ == '__main__':#program will split
                speechtx(mistake(test,testinput))
                speechtx(speed_time(time_1,time_2,testinput))
 
-           elif "video download" in data1:
+            elif "video download" in data1:
                from pytube import YouTube
                lin=input("enter the url of the youtube video")
                link=lin

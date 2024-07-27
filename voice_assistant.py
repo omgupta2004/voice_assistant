@@ -364,6 +364,15 @@ if __name__ == '__main__':#program will split
                sp.mainloop()
                speechtx("normal speed")
 
+            elif "generate password" in data1:
+               import random
+               import string
+               pass_len=12
+               charvalues=string.ascii_letters + string.digits + string.punctuation
+               password=""
+               for i in range (pass_len):
+                  password+=random.choice(charvalues)
+               print("your random passwword is=",password)
                 
             elif "exit" in data1:
                speechtx("thank you")

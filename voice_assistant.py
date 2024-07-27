@@ -189,7 +189,7 @@ if __name__ == '__main__':#program will split
 
                print("___end__")
 
-                elif "open translater" in data1:
+            elif "open translater" in data1:
                from mttkinter import *
                from tkinter import *
                from tkinter import ttk #class jo combo box laegi
@@ -248,8 +248,45 @@ if __name__ == '__main__':#program will split
                dest_txt.place(x=10,y=400,height=150,width=480)
 
                root .mainloop()
+            elif "typing speed" in data1:
+               from time import *
+               import random as r
+               def mistake(partest,usertest):
+                 error=0
+                 for i in range(len(partest)):
+                    try:
+                      if partest[i]!=usertest[i]:
+                       error=error+1
+                    except:
+                       error=error+1        
+                 return error       
+               def speed_time(time_s,time_e,user_input):
+                 time_delay=time_e-time_s
+                 time_R=round(time_delay,2)
+                 speed=len(user_input)/time_R
+                 return round(speed)
+               import random
+               import string
+               pass_len=1000
+               charvalues=string.ascii_letters + string.digits + string.punctuation
+               test=""
+               for i in range (pass_len):
+                test+=random.choice(charvalues)
+
+               print("*****typing speed calculator*****")
+               print(test)
+               print()
+               print()
+               time_1=time()
+               testinput=input("Enter :") 
+               time_2=time()
+               print('speed :',speed_time(time_1,time_2,testinput),"w/sec")
+               print("error  :",mistake(test,testinput)) 
+               speechtx(mistake(test,testinput))
+               speechtx(speed_time(time_1,time_2,testinput))
+
                 
-               elif "exit" in data1:
+            elif "exit" in data1:
                speechtx("thank you")
                break
     else:

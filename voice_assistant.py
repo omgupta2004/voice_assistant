@@ -314,6 +314,20 @@ if __name__ == '__main__':#program will split
                for video in py.videos:
                  video.streams.first().download()
                speechtx("download successfull")
+
+            elif "phone" in data1:
+               import phonenumbers 
+               from phonenumbers import timezone, geocoder,carrier
+
+               number=input("enter yout number with +__")
+               phone=phonenumbers.parse(number)
+               time=timezone.time_zones_for_number(phone)
+               car=carrier.name_for_number(phone,"en")#en is for company name in english
+               reg=geocoder.description_for_number(phone,"en")
+               print(phone)
+               print(time)
+               print(car)
+               print(reg)
                 
             elif "exit" in data1:
                speechtx("thank you")

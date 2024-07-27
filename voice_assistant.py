@@ -285,7 +285,7 @@ if __name__ == '__main__':#program will split
                speechtx(mistake(test,testinput))
                speechtx(speed_time(time_1,time_2,testinput))
 
-        elif "video download" in data1:
+           elif "video download" in data1:
                from pytube import YouTube
                lin=input("enter the url of the youtube video")
                link=lin
@@ -302,6 +302,18 @@ if __name__ == '__main__':#program will split
                video[strm].download()
                print("successfullly!!")
                speechtx("download successful")
+
+       
+            elif "playlist" in data1:
+               from pytube import Playlist
+               pyt=input("enter the url of the playlist")
+               py= Playlist(pyt)
+
+               print(f'Downloading : {py.title}')
+
+               for video in py.videos:
+                 video.streams.first().download()
+               speechtx("download successfull")
                 
             elif "exit" in data1:
                speechtx("thank you")

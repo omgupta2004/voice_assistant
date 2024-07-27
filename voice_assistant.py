@@ -373,7 +373,30 @@ if __name__ == '__main__':#program will split
                for i in range (pass_len):
                   password+=random.choice(charvalues)
                print("your random passwword is=",password)
-                
+
+            elif " number game " in data1:
+               import random 
+               target=random.randint(1,100)
+
+               while True:
+                  userchoice=input("guess the number or QUIT(Q)")
+                  if(userchoice=='Q'):
+                     print("quit")
+                     break
+                  userchoice=int(userchoice)
+                  if(userchoice==target):
+                    print("success:correct guess")
+                    break
+                  elif(userchoice<target):
+                    print("your number was too small take a bigger guess")
+                  else:
+                    print("your number was too BIG take a smaller guess")
+     
+               print("game over")
+
+            elif "who made this" in data1:
+                speechtxt("Om Gupta and Aditya Godara")
+            
             elif "exit" in data1:
                speechtx("thank you")
                break

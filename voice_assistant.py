@@ -33,8 +33,8 @@ def speechtx(x):
     engine.say(x)
     engine.runAndWait()
 if __name__ == '__main__':#program will split
-    if "alexa" in sptext().lower():
-        speechtx("initializinng alexa")
+    if "ava" in sptext().lower():
+        speechtx("initializinng ava")
         while(True):
             data1=sptext().lower()
 

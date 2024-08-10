@@ -393,10 +393,7 @@ if __name__ == '__main__':#program will split
                     print("your number was too BIG take a smaller guess")
      
                print("game over")
-
-            elif "who made this" in data1:
-                speechtxt("Om Gupta and Aditya Godara")
-
+                
             elif "notificaton" in data1:
                from plyer import notification
                import time
